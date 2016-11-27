@@ -1,4 +1,7 @@
-<%= link_to "Добавить фильм", new_movie_path %>
+<p><%= link_to "Главная страница", root_path %></p>
+<p><%= link_to "Добавить фильм", new_movie_path %></p>
+
+<h3>Список фильмов</h3>
 
 <% @movies.each do |movie| %>
   <p><%= link_to movie.name, movie_path(movie.id) %></p>
