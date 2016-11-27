@@ -5,7 +5,7 @@
 
 <p>
   <strong>Описание:</strong><br>
-  <% @movie.description.split.each do |line| %>
+  <% @movie.description.split("\r\n").each do |line| %>
     <br><%= line %>
   <% end %>
 </p>
