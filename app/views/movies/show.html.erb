@@ -4,8 +4,10 @@
 </p>
 
 <p>
-  <strong>Описание:</strong>
-  <%= @movie.description %>
+  <strong>Описание:</strong><br>
+  <% @movie.description.split.each do |line| %>
+    <br><%= line %>
+  <% end %>
 </p>
 
 <p><%= link_to "Главная страница", root_path %></p>
