@@ -1,0 +1,14 @@
+<h1>Добавить фильм</h1>
+
+<%= form_for :movie, url: movies_path do |f| %>
+  <p>
+    <%= f.label :name, "Название" %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit "Сохранить" %>
+  </p>
+<% end %>
+
+<%= link_to "Фильмы", movies_path %>

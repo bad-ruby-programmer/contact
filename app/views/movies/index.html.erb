@@ -1,0 +1,5 @@
+<%= link_to "Добавить фильм", new_movie_path %>
+
+<% @movies.each do |movie| %>
+  <p><%= link_to movie.name, movie_path(movie.id) %></p>
+<% end %>
