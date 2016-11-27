@@ -5,11 +5,14 @@
     <%= f.label :name, "Название" %><br>
     <%= f.text_field :name %>
   </p>
-
+  <p>
+    <%= f.label :description, "Описание" %><br>
+    <%= f.text_area :description %>
+  </p>
   <p>
     <%= f.submit "Сохранить" %>
   </p>
 <% end %>
 
 <p><%= link_to "Главная страница", root_path %></p>
-<p><%= link_to "Добавить фильм", new_movie_path %></p>
+<p><%= link_to "Фильмы", movies_path %></p>

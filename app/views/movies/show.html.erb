@@ -3,5 +3,10 @@
   <%= @movie.name %>
 </p>
 
+<p>
+  <strong>Описание:</strong>
+  <%= @movie.description %>
+</p>
+
 <p><%= link_to "Главная страница", root_path %></p>
-<p><%= link_to "Добавить фильм", new_movie_path %></p>
+<p><%= link_to "Фильмы", movies_path %></p>
