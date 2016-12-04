@@ -1,8 +1,22 @@
-<p><%= link_to "Главная страница", root_path %></p>
-<p><%= link_to "Добавить фильм", new_movie_path %></p>
-
-<h3>Список фильмов</h3>
-
-<% @movies.each do |movie| %>
-  <p><%= link_to movie.name, movie_path(movie.id) %></p>
-<% end %>
+<table>
+  <tr class="header-row">
+    <td colspan=3>
+      <h3>
+        Информация о фильме
+      </h3>
+    </td>
+  </tr>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td>
+        <%= movie.name %>
+      </td>
+      <td>
+        <%= movie.release_year %>
+      </td>
+      <td>
+        <%= link_to "Описание", movie_path(movie.id) %>
+      </td>    
+    </tr>
+  <% end %>
+</table>

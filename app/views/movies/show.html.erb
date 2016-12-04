@@ -1,14 +1,36 @@
-<p>
-  <strong>Название фильма:</strong>
-  <%= @movie.name %>
-</p>
-
-<p>
-  <strong>Описание:</strong><br>
-  <% @movie.description.split("\r\n").each do |line| %>
-    <br><%= line %>
-  <% end %>
-</p>
-
-<p><%= link_to "Главная страница", root_path %></p>
-<p><%= link_to "Фильмы", movies_path %></p>
+<table>
+  <tr class="header-row">
+    <td colspan=2>
+      <h3>
+        Информация о фильме
+      </h3>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Название
+    </td>
+    <td>
+      <%= @movie.name %>
+    </td>    
+  </tr>
+  <tr>
+    <td>
+      Год выхода
+    </td>
+    <td>
+      <%= @movie.release_year %>
+    </td>    
+  </tr>
+  <tr>
+    <td>
+      Описание
+    </td>
+    <td>
+      <% @movie.description.split("\r\n").each do |line| %>
+        <%= line %>
+        <br>
+      <% end %>
+    </td>    
+  </tr>
+</table>

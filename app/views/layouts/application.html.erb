@@ -9,6 +9,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="navigation">
+      <%= link_to "Главная страница", root_path %>
+      <%= link_to "Список фильмов", movies_path %>
+      <%= link_to "Добавить фильм", new_movie_path %>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
   </body>
 </html>
